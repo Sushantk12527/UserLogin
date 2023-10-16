@@ -7,4 +7,6 @@ public interface UserService {
 
     String Login(String email, String password);
 
+    void Logout(String token);
+
 }

@@ -50,7 +50,14 @@ public class UserServiceImpl implements UserService{
          }
     }
 
+    @Override
+    public void Logout(String token) {
 
+        Session session= sessionRepository.findByToken(token);
+        sessionRepository.delete(session);
+
+
+    }
 
 
     protected String getSaltString() {
@@ -65,4 +72,6 @@ public class UserServiceImpl implements UserService{
         return saltStr;
 
     }
+
+
 }

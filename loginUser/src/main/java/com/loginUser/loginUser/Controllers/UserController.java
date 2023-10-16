@@ -25,7 +25,7 @@ public class UserController {
     }
 
     @DeleteMapping("/logout")
-    public void Logout(){
-
+    public void Logout(@RequestParam String token){
+        userService.Logout(token);
     }
 }
